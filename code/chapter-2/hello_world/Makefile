@@ -9,7 +9,10 @@ LINUX_SRC = /Users/zhangxiaozheng/workspace/c/linux-5.10.124
 BPFTOOLS = /$(LINUX_SRC)/samples/bpf
 BPFLOADER = $(BPFTOOLS)/bpf_load.c
 
+#CCINCLUDE += -I/$(LINUX_SRC)/include/uapi
+CCINCLUDE += -I/$(LINUX_SRC)/tools/testing/selftests/bpf
 CCINCLUDE += -I/$(LINUX_SRC)/include/uapi
+
 
 LOADINCLUDE += -I/$(LINUX_SRC)/samples/bpf
 LOADINCLUDE += -I/$(LINUX_SRC)/tools/lib
