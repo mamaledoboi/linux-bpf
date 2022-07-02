@@ -3,13 +3,13 @@ project(linux_bpf C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/include)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/include/uapi)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/samples/bpf)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/lib)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/perf)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/include)
-include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/testing/selftests/bpf)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/include)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/include/uapi)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/samples/bpf)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/tools/lib)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/tools/perf)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/tools/include)
+include_directories(/Users/zhangxiaozheng/workspace/c/ubuntu-bionic/tools/testing/selftests/bpf)
 
 
 

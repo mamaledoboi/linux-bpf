@@ -1,2 +1,3 @@
-# 引用高德基础镜像，上线指南参考 https://yuque.antfin-inc.com/infrastructure2.0/pouch/zi67xn
-FROM reg.docker.alibaba-inc.com/aone-base-global/gaode_7u2_java_pandoraboot:1.1
+FROM cangjia_ubt:20220626
+COPY code /workspace/linux-bpf
+WORKDIR /workspace/linux-bpf/chapter-2/hello_world

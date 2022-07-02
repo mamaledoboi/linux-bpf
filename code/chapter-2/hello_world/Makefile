@@ -4,15 +4,11 @@ EXECABLE = monitor-exec
 
 BPFCODE = bpf_program
 
-LINUX_SRC = /Users/zhangxiaozheng/workspace/c/linux-5.10.124
-
+LINUX_SRC = kernel-src
 BPFTOOLS = /$(LINUX_SRC)/samples/bpf
 BPFLOADER = $(BPFTOOLS)/bpf_load.c
 
-#CCINCLUDE += -I/$(LINUX_SRC)/include/uapi
 CCINCLUDE += -I/$(LINUX_SRC)/tools/testing/selftests/bpf
-CCINCLUDE += -I/$(LINUX_SRC)/include/uapi
-
 
 LOADINCLUDE += -I/$(LINUX_SRC)/samples/bpf
 LOADINCLUDE += -I/$(LINUX_SRC)/tools/lib
@@ -44,11 +40,11 @@ clean:
 	rm -f *.o *.so $(EXECABLE)
 
 build: ${BPFCODE.c} ${BPFLOADER}
-	$(CLANG) -O2 -target bpf -c $(BPFCODE:=.c) $(CCINCLUDE) -o ${BPFCODE:=.o}
+    $(CLANG) -O2 -target bpf -c $(BPFCODE:=.c) $(CCINCLUDE) -o ${BPFCODE:=.o}
 
 bpfload: build
-	clang $(CFLAGS) -o $(EXECABLE) -lelf $(LOADINCLUDE) $(LIBRARY_PATH) $(BPFSO) \
-        $(BPFLOADER) loader.c
+    clang $(CFLAGS) -o $(EXECABLE) -lelf $(LOADINCLUDE) $(LIBRARY_PATH) $(BPFSO) \
+    	$(BPFLOADER) loader.c
 
 $(EXECABLE): bpfload
 
