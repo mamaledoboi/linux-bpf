@@ -9,6 +9,8 @@ include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/samples/bpf
 include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/lib)
 include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/perf)
 include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/include)
+include_directories(/Users/zhangxiaozheng/workspace/c/linux-5.10.124/tools/testing/selftests/bpf)
+
 
 
 add_executable(linux_bpf
